@@ -1,0 +1,404 @@
+<html lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Haziran Etkinlik Takvimi | RadissonBet</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+    *{box-sizing:border-box}
+    :root{
+      --text:#eeeeee;
+      --cyan:#00f0ff;
+      --blue:#032e73;
+      --deep:#121d2f;
+      --card:rgba(11,22,42,.78);
+      --line:rgba(0,240,255,.22);
+      --white:#ffffff;
+    }
+    body{
+      margin:0;
+      font-family:Manrope,sans-serif;
+      color:#eeeeee;
+      background:#121d2f url("https://sport.cmsdigi.com/App_Data/084fbfcc-bd46-423e-ae29-5b998430504a/Files/promosyon-arkaplan.jpg") left top/auto fixed repeat;
+      overflow-x:hidden;
+    }
+    .page{max-width:1200px;margin:0 auto;padding:16px}
+    .header{display:flex;align-items:center}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:42px}
+    .brand-slogan{font-family:Sora,sans-serif;font-weight:600;font-size:13px;color:#dcecff}
+    .neon-divider{
+      margin:16px 0 28px;height:12px;border-radius:999px;
+      background:linear-gradient(90deg,rgba(0,240,255,0),rgba(3,46,115,.85),rgba(3,46,115,.55),rgba(3,46,115,.85),rgba(0,240,255,0));
+      box-shadow:0 0 13px #fff,0 0 46px rgba(0,255,255,.22)
+    }
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:48px 0 28px}
+    .hero h1{font-family:Sora,sans-serif;font-size:36px;margin:0 0 12px;color:#fff;line-height:1.15}
+    .hero p{font-weight:800;line-height:1.6;margin:0;color:#dcecff;max-width:560px}
+    .hero-image img{width:100%;border-radius:14px;display:block;box-shadow:0 16px 40px rgba(0,0,0,.35)}
+    strong{color:#fff}
+
+    .section-title{
+      display:block;text-align:center;margin:0 0 16px;font-size:26px;line-height:1.25;color:var(--text);
+      font-family:Sora,sans-serif;font-weight:800;visibility:visible;opacity:1;
+    }
+    .calendar-wrap{margin:8px 0 30px}
+    .weekdays,.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:9px}
+    .weekday{
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));
+      border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 8px;text-align:center;
+      font-family:Sora,sans-serif;font-weight:800;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.15)
+    }
+    .day-empty{min-height:118px;border-radius:12px;display:flex;align-items:flex-start;padding:18px 12px;color:#fff;font-family:Sora,sans-serif;font-weight:800;font-size:26px;opacity:.9}
+    .day-card{
+      min-height:118px;border-radius:12px;padding:10px 9px;position:relative;cursor:pointer;
+      background:linear-gradient(145deg,rgba(5,16,36,.92),rgba(11,27,52,.86));
+      border:2px solid rgba(0,240,255,.9);box-shadow:0 0 18px rgba(0,240,255,.12), inset 0 0 28px rgba(255,255,255,.03);
+      transition:.2s ease;overflow:hidden;
+    }
+    .day-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 8%,rgba(255,255,255,.10),transparent 25%);pointer-events:none}
+    .day-card:hover{transform:translateY(-3px);box-shadow:0 0 22px rgba(0,240,255,.36),0 14px 28px rgba(0,0,0,.24)}
+    .day-card.tournament{
+      border-color:#2d5cff;
+      box-shadow:0 0 14px rgba(45,92,255,.85),0 0 30px rgba(45,92,255,.35), inset 0 0 20px rgba(45,92,255,.12);
+    }
+    .day-card.turkey{border-color:#ffffff;box-shadow:0 0 12px rgba(255,255,255,.80),0 0 28px rgba(255,255,255,.34), inset 0 0 28px rgba(255,255,255,.05)}
+    .day-num{font-family:Sora,sans-serif;font-weight:800;font-size:26px;line-height:1;color:#22f5ff;text-align:center;margin-bottom:8px}
+    .icon{position:absolute;right:10px;top:10px;font-size:20px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.45))}
+    .match-type{font-size:12px;font-weight:800;text-align:center;color:#dcecff;margin-bottom:2px;line-height:1.2}
+    .match-name{font-family:Sora,sans-serif;font-size:13px;font-weight:800;text-align:center;color:#fff;line-height:1.18}
+    .happy-mini{font-size:10px;font-weight:800;text-align:center;color:#dcecff;margin-top:9px;line-height:1.25;opacity:.95}
+
+    .details{margin-top:10px;margin-bottom:34px}
+    .details-card{
+      background:rgba(10,20,38,.72);border:1px solid rgba(255,255,255,.10);border-left:5px solid rgba(0,240,255,.95);
+      border-radius:12px;margin-bottom:10px;box-shadow:0 16px 38px rgba(0,0,0,.22);overflow:hidden;
+    }
+    .details-card.turkey{border-left-color:#ffffff;box-shadow:0 16px 38px rgba(0,0,0,.22),0 0 22px rgba(255,255,255,.22)}
+    .details-head{width:100%;border:0;background:transparent;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;cursor:pointer;text-align:left;font-family:Sora,sans-serif;font-weight:800;font-size:18px}
+    .date-pill{display:inline-flex;align-items:center;border-radius:999px;padding:8px 14px;background:linear-gradient(90deg,#032e73,rgba(0,240,255,.18));border:1px solid rgba(0,240,255,.22);font-size:15px;white-space:nowrap;box-shadow:0 0 18px rgba(0,240,255,.12)}
+    .details-title{display:none}
+    .arrow{color:#22f5ff;font-size:22px;transition:.2s ease}
+    .details-card.open .arrow{transform:rotate(180deg)}
+    .details-body{display:none;padding:0 22px 18px;border-top:1px solid rgba(0,240,255,.18)}
+    .details-card.open .details-body{display:block}
+    .program-type{display:none}
+    .program-list{list-style:none;margin:0;padding:0}
+    .program-list li{padding:11px 0;border-bottom:1px dashed rgba(0,240,255,.16);font-weight:800;font-size:16px;line-height:1.45;color:#eee}
+    .program-list li:before{content:"";margin-right:0}
+
+    @media(max-width:900px){
+      .calendar-grid,.weekdays{gap:7px}.day-card{min-height:122px}.match-name{font-size:12px}.happy-mini{display:none}
+    }
+    @media(max-width:768px){
+      .page{padding:12px 8px;max-width:100%}
+      .header{padding:0 2px}
+      .brand img{height:34px}
+      .brand-slogan{font-size:11px}
+      .neon-divider{height:9px;margin:12px 0 20px}
+      .section-title{font-size:24px;margin:0 0 14px}
+      .calendar-wrap{margin:8px 0 28px}
+      .weekdays,.calendar-grid{grid-template-columns:repeat(7,1fr);gap:4px;width:100%}
+      .weekday{display:block;border-radius:5px;padding:7px 2px;font-size:10px;box-shadow:0 6px 14px rgba(0,0,0,.18)}
+      .day-empty{display:flex;min-height:76px;padding:5px 2px;font-size:18px}
+      .day-card{min-height:76px;border-radius:6px;padding:5px 3px;border-width:1.5px}
+      .day-card:hover{transform:none}
+      .day-num{font-size:18px;margin-bottom:4px}
+      .icon{right:4px;top:4px;font-size:11px}
+      .match-type{font-size:7px;margin-bottom:1px;line-height:1.05}
+      .match-name{font-size:7px;line-height:1.05}
+      .happy-mini{display:none}
+      .day-card div[style*="8fb3ff"]{display:none!important}
+      .details{margin-top:6px;margin-bottom:28px}
+      .details-head{flex-direction:row;align-items:center;font-size:14px;padding:9px 12px;gap:8px}
+      .details-title{display:none}
+      .date-pill{font-size:11px;padding:6px 10px;max-width:calc(100% - 28px);overflow:hidden;text-overflow:ellipsis}
+      .arrow{font-size:16px;margin-left:auto;line-height:1}
+      .details-body{padding:0 14px 14px}
+      .program-list li{font-size:13px;padding:9px 0}
+    }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="header">
+  <div class="brand">
+    <a href="https://radgit.com/sosyall" rel="noopener" target="_blank">
+      <img alt="RadissonBet" src="https://cdn.prod.website-files.com/68ad80d65417514646edf3a3/68adb798dfed270f5040c714_logowhite.png">
+    </a>
+    <span class="brand-slogan">Türkiye’nin Mavi Sitesi</span>
+  </div>
+</header>
+<div class="neon-divider"></div>
+
+<section class="calendar-wrap">
+<h2 class="section-title">Etkinlik Takvimi</h2>
+<div class="weekdays">
+  <div class="weekday">Pzt</div><div class="weekday">Sal</div><div class="weekday">Çar</div><div class="weekday">Per</div><div class="weekday">Cum</div><div class="weekday">Cmt</div><div class="weekday">Paz</div>
+</div>
+<div class="calendar-grid" id="calendarGrid">
+  <div class="day-empty"></div><div class="day-empty"></div><div class="day-empty"></div>
+  <div class="day-card" data-target="d18"><span class="icon">🏆</span><div class="day-num">18</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">İsviçre - Bosna Hersek</div><div class="happy-mini">BUY SAATLERİ • Gece Freespin</div></div>
+  <div class="day-card" data-target="d19"><span class="icon">🏆</span><div class="day-num">19</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">ABD - Avustralya</div><div class="happy-mini">10.000₺ Risksiz Spin • Gece Freespin</div></div>
+  <div class="day-card turkey" data-target="d20"><span class="icon">🇹🇷</span><div class="day-num">20</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">Türkiye - Paraguay</div><div class="happy-mini">1000₺ Bonus Buy • Gece Freespin</div></div>
+  <div class="day-card" data-target="d21"><span class="icon">🏆</span><div class="day-num">21</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">İspanya - Suudi Arabistan</div><div class="happy-mini">BUY SAATLERİ • Gece Freespin</div></div>
+  <div class="day-card tournament" data-target="d22"><span class="icon">🏆</span><div class="day-num">22</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">Arjantin - Avusturya</div><div class="happy-mini">10.000₺ Risksiz Spin • EGT TURNUVA • Gece Freespin</div></div>
+  <div class="day-card tournament" data-target="d23"><span class="icon">🏆</span><div class="day-num">23</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">İngiltere - Gana</div><div class="happy-mini">1000₺ Bonus Buy • EGT TURNUVA • Gece Freespin</div></div>
+  <div class="day-card tournament" data-target="d24"><span class="icon">🏆</span><div class="day-num">24</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">İsviçre - Kanada</div><div class="happy-mini">BUY SAATLERİ • EGT TURNUVA • Gece Freespin</div></div>
+  <div class="day-card tournament" data-target="d25"><span class="icon">🏆</span><div class="day-num">25</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">Ekvador - Almanya</div><div class="happy-mini">10.000₺ Risksiz Spin • EGT TURNUVA • Gece Freespin</div></div>
+  <div class="day-card tournament turkey" data-target="d26"><span class="icon">🇹🇷</span><div class="day-num">26</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">Türkiye - ABD</div><div class="happy-mini">1000₺ Bonus Buy • EGT + AMUSNET • Gece Freespin</div></div>
+  <div class="day-card tournament" data-target="d27"><span class="icon">🏆</span><div class="day-num">27</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">İspanya - Uruguay</div><div class="happy-mini">BUY SAATLERİ • AMUSNET TURNUVA • Gece Freespin</div></div>
+  <div class="day-card tournament" data-target="d28"><span class="icon">🏆</span><div class="day-num">28</div><div class="match-type">Dünya Kupası</div><div style='text-align:center;font-size:10px;color:#8fb3ff;font-weight:800'>🎮 TURNUVA</div><div class="match-name">Panama - İngiltere</div><div class="happy-mini">10.000₺ Risksiz Spin • AMUSNET TURNUVA • Gece Freespin</div></div>
+  <div class="day-card tournament" data-target="d29"><span class="icon">☀️</span><div class="day-num">29</div><div class="match-type">Gün İçi Happy</div><div class="match-name">1000₺ Bonus Buy</div><div class="happy-mini">AMUSNET TURNUVA • Gece Freespin</div></div><div class="day-card tournament" data-target="d30"><span class="icon">☀️</span><div class="day-num">30</div><div class="match-type">Gün İçi Happy</div><div class="match-name">BUY SAATLERİ</div><div class="happy-mini">AMUSNET TURNUVA • Gece Freespin</div></div>
+</div>
+</section>
+
+<section class="details">
+<h2 class="section-title">GÜNÜN ÖZEL FIRSATLARI</h2>
+<div id="detailsList">
+  <div class="details-card  open" id="d18">
+    <button class="details-head" type="button">
+      <span class="date-pill">18 Haziran Perşembe</span>
+      <span class="details-title">İsviçre - Bosna Hersek</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> İsviçre - Bosna Hersek</li>
+        <li><strong>Gün İçi Happy:</strong> BUY SAATLERİ</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d19">
+    <button class="details-head" type="button">
+      <span class="date-pill">19 Haziran Cuma</span>
+      <span class="details-title">ABD - Avustralya</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> ABD - Avustralya</li>
+        <li><strong>Gün İçi Happy:</strong> 10.000₺ Risksiz Spin</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card turkey " id="d20">
+    <button class="details-head" type="button">
+      <span class="date-pill">🇹🇷 20 Haziran Cumartesi</span>
+      <span class="details-title">Türkiye - Paraguay</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> Türkiye - Paraguay</li>
+        <li><strong>Gün İçi Happy:</strong> 1000₺ Bonus Buy</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d21">
+    <button class="details-head" type="button">
+      <span class="date-pill">21 Haziran Pazar</span>
+      <span class="details-title">İspanya - Suudi Arabistan</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> İspanya - Suudi Arabistan</li>
+        <li><strong>Gün İçi Happy:</strong> BUY SAATLERİ</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d22">
+    <button class="details-head" type="button">
+      <span class="date-pill">22 Haziran Pazartesi</span>
+      <span class="details-title">Arjantin - Avusturya</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> Arjantin - Avusturya</li>
+        <li><strong>Gün İçi Happy:</strong> 10.000₺ Risksiz Spin</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d23">
+    <button class="details-head" type="button">
+      <span class="date-pill">23 Haziran Salı</span>
+      <span class="details-title">İngiltere - Gana</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> İngiltere - Gana</li>
+        <li><strong>Gün İçi Happy:</strong> 1000₺ Bonus Buy</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d24">
+    <button class="details-head" type="button">
+      <span class="date-pill">24 Haziran Çarşamba</span>
+      <span class="details-title">İsviçre - Kanada</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> İsviçre - Kanada</li>
+        <li><strong>Gün İçi Happy:</strong> BUY SAATLERİ</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d25">
+    <button class="details-head" type="button">
+      <span class="date-pill">25 Haziran Perşembe</span>
+      <span class="details-title">Ekvador - Almanya</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> Ekvador - Almanya</li>
+        <li><strong>Gün İçi Happy:</strong> 10.000₺ Risksiz Spin</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card turkey " id="d26">
+    <button class="details-head" type="button">
+      <span class="date-pill">🇹🇷 26 Haziran Cuma</span>
+      <span class="details-title">Türkiye - ABD</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> Türkiye - ABD</li>
+        <li><strong>Gün İçi Happy:</strong> 1000₺ Bonus Buy</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d27">
+    <button class="details-head" type="button">
+      <span class="date-pill">27 Haziran Cumartesi</span>
+      <span class="details-title">İspanya - Uruguay</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> İspanya - Uruguay</li>
+        <li><strong>Gün İçi Happy:</strong> BUY SAATLERİ</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d28">
+    <button class="details-head" type="button">
+      <span class="date-pill">28 Haziran Pazar</span>
+      <span class="details-title">Panama - İngiltere</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Dünya Kupası</div>
+      <ul class="program-list">
+        <li><strong>Maç:</strong> Panama - İngiltere</li>
+        <li><strong>Gün İçi Happy:</strong> 10.000₺ Risksiz Spin</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d29">
+    <button class="details-head" type="button">
+      <span class="date-pill">29 Haziran Pazartesi</span>
+      <span class="details-title">Günün Fırsatları</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Güne Özel Program</div>
+      <ul class="program-list">
+        
+        <li><strong>Gün İçi Happy:</strong> 1000₺ Bonus Buy</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div>
+  <div class="details-card  " id="d30">
+    <button class="details-head" type="button">
+      <span class="date-pill">30 Haziran Salı</span>
+      <span class="details-title">Günün Fırsatları</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">Güne Özel Program</div>
+      <ul class="program-list">
+        
+        <li><strong>Gün İçi Happy:</strong> BUY SAATLERİ</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 Yatırıma Ek Freespin</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+</div>
+<script>
+const days = [
+ {id:'d18', date:'18 Haziran Perşembe', match:'İsviçre - Bosna Hersek', happy:'BUY SAATLERİ', night:'Yatırıma Ek Freespin', tr:false},
+ {id:'d19', date:'19 Haziran Cuma', match:'ABD - Avustralya', happy:'10.000₺ Risksiz Spin', night:'Yatırıma Ek Freespin', tr:false},
+ {id:'d20', date:'20 Haziran Cumartesi', match:'Türkiye - Paraguay', happy:'1000₺ Bonus Buy', night:'Yatırıma Ek Freespin', tr:true},
+ {id:'d21', date:'21 Haziran Pazar', match:'İspanya - Suudi Arabistan', happy:'BUY SAATLERİ', night:'Yatırıma Ek Freespin', tr:false},
+ {id:'d22', date:'22 Haziran Pazartesi', match:'Arjantin - Avusturya', happy:'10.000₺ Risksiz Spin', night:'Yatırıma Ek Freespin', tr:false, tournament:'RadissonBet EGT Digital Turnuvası', prize:'425.000₺', period:'22 Haziran – 26 Haziran'},
+ {id:'d23', date:'23 Haziran Salı', match:'İngiltere - Gana', happy:'1000₺ Bonus Buy', night:'Yatırıma Ek Freespin', tr:false, tournament:'RadissonBet EGT Digital Turnuvası', prize:'425.000₺', period:'22 Haziran – 26 Haziran'},
+ {id:'d24', date:'24 Haziran Çarşamba', match:'İsviçre - Kanada', happy:'BUY SAATLERİ', night:'Yatırıma Ek Freespin', tr:false, tournament:'RadissonBet EGT Digital Turnuvası', prize:'425.000₺', period:'22 Haziran – 26 Haziran'},
+ {id:'d25', date:'25 Haziran Perşembe', match:'Ekvador - Almanya', happy:'10.000₺ Risksiz Spin', night:'Yatırıma Ek Freespin', tr:false, tournament:'RadissonBet EGT Digital Turnuvası', prize:'425.000₺', period:'22 Haziran – 26 Haziran'},
+ {id:'d26', date:'26 Haziran Cuma', match:'Türkiye - ABD', happy:'1000₺ Bonus Buy', night:'Yatırıma Ek Freespin', tr:true, tournament:'RadissonBet EGT Digital Turnuvası', prize:'425.000₺', period:'22 Haziran – 26 Haziran', tournament2:'RadissonBet Amusnet Turnuvası', prize2:'430.000₺', period2:'26 Haziran – 30 Haziran'},
+ {id:'d27', date:'27 Haziran Cumartesi', match:'İspanya - Uruguay', happy:'BUY SAATLERİ', night:'Yatırıma Ek Freespin', tr:false, tournament:'RadissonBet Amusnet Turnuvası', prize:'430.000₺', period:'26 Haziran – 30 Haziran'},
+ {id:'d28', date:'28 Haziran Pazar', match:'Panama - İngiltere', happy:'10.000₺ Risksiz Spin', night:'Yatırıma Ek Freespin', tr:false, tournament:'RadissonBet Amusnet Turnuvası', prize:'430.000₺', period:'26 Haziran – 30 Haziran'},
+ {id:'d29', date:'29 Haziran Pazartesi', match:'Gün İçi Happy', happy:'1000₺ Bonus Buy', night:'Yatırıma Ek Freespin', tr:false, noMatch:true, tournament:'RadissonBet Amusnet Turnuvası', prize:'430.000₺', period:'26 Haziran – 30 Haziran'},
+ {id:'d30', date:'30 Haziran Salı', match:'Gün İçi Happy', happy:'BUY SAATLERİ', night:'Yatırıma Ek Freespin', tr:false, noMatch:true, tournament:'RadissonBet Amusnet Turnuvası', prize:'430.000₺', period:'26 Haziran – 30 Haziran'}
+];
+const list = document.getElementById('detailsList');
+list.innerHTML = days.map((d,i)=>`
+  <div class="details-card ${d.tr?'turkey':''} ${i===0?'open':''}" id="${d.id}">
+    <button class="details-head" type="button">
+      <span class="date-pill">${d.tr?'🇹🇷 ':''}${d.date}</span>
+      <span class="details-title">${d.noMatch ? 'Günün Fırsatları' : d.match}</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="details-body">
+      <div class="program-type">${d.noMatch ? 'Güne Özel Program' : 'Dünya Kupası'}</div>
+      <ul class="program-list">
+        ${d.noMatch ? '' : `<li><strong>Maç:</strong> ${d.match}</li>`}
+        <li><strong>Gün İçi Happy:</strong> ${d.happy}</li>
+        <li><strong>Gece:</strong> 00:00 - 08:00 ${d.night}</li>
+        ${d.tournament ? `<li><strong>Turnuva:</strong><br>${d.tournament.replace('RadissonBet ','')}<br>${d.prize} Ödül Havuzu<br>${d.period}</li>` : ''}
+        ${d.tournament2 ? `<li><strong>Turnuva:</strong><br>${d.tournament2.replace('RadissonBet ','')}<br>${d.prize2} Ödül Havuzu<br>${d.period2}</li>` : ''}
+      </ul>
+    </div>
+  </div>`).join('');
+
+document.querySelectorAll('.details-head').forEach(btn=>{
+  btn.addEventListener('click',()=> btn.closest('.details-card').classList.toggle('open'));
+});
+document.querySelectorAll('.day-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const target = document.getElementById(card.dataset.target);
+    document.querySelectorAll('.details-card').forEach(el=>el.classList.remove('open'));
+    target.classList.add('open');
+    target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+
+</body></html>

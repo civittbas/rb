@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadissonBet — PLAY with KEVIN (Slot & Canlı Casino Turnuvası)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Manrope', sans-serif;
+            color: var(--text);
+            background-image: linear-gradient(rgba(18, 29, 47, 0.85), rgba(18, 29, 47, 0.85)), url("https://i.ibb.co/r2mmChXD/1920x1800-20260113171928904-20260119234923247-2.webp");
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: transparent;
+        }
+        :root {
+            --bg: #121d2f;
+            --text: #eeeeee;
+            --sub: #fff;
+            --aqua: aqua;
+            --red: #ff2b2b;
+        }
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: nowrap;
+        }
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .brand img {
+            height: 42px;
+            display: block;
+        }
+        .brand-slogan {
+            font-weight: 600;
+            color: rgba(238, 238, 238, 0.85);
+            font-size: 13px;
+            white-space: nowrap;
+            line-height: 1;
+        }
+        .neon-divider {
+            margin: 16px 0 28px 0;
+            height: 12px;
+            border-radius: 999px;
+            background-image: linear-gradient(90deg, rgba(0, 240, 255, 0), rgba(3, 46, 115, 0.85), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.85), rgba(0, 240, 255, 0));
+            position: relative;
+            box-shadow: #ffffff 0px 0px 13px, rgba(0, 255, 255, 0.22) 0px 0px 46px;
+            overflow: hidden;
+        }
+        .neon-divider::before {
+            content: "";
+            position: absolute;
+            top: 2px; right: 2px; bottom: 2px; left: 2px;
+            border-radius: 999px;
+            background-image: linear-gradient(rgba(18, 29, 47, 0.55), rgba(18, 29, 47, 0.9));
+        }
+        .neon-divider::after {
+            content: "";
+            position: absolute;
+            top: 0; bottom: 0; left: -40%;
+            width: 45%;
+            background-image: linear-gradient(90deg, transparent, rgba(52, 67, 249, 0.55), transparent);
+            filter: blur(1px);
+            animation: sweep 2.8s ease-in-out infinite;
+            opacity: 0.75;
+        }
+        @keyframes sweep {
+            0% { transform: translateX(0px); }
+            100% { transform: translateX(220%); }
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: center;
+        }
+        .eyebrow {
+            color: aqua;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(27px, 4vw, 42px);
+            line-height: 1.15;
+            margin: 8px 0 14px 0;
+            color: var(--text);
+        }
+        .hero-copy {
+            font-size: 17px;
+            line-height: 1.65;
+            color: rgba(238, 238, 238, 0.86);
+            margin: 0;
+        }
+        .hero-image {
+            max-width: 560px;
+            justify-self: end;
+            position: relative;
+            padding: 5px;
+            border-radius: 18px;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)), conic-gradient(from 210deg, rgba(3, 46, 115, 0.95), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.95), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.95));
+        }
+        .hero-image img {
+            width: 100%;
+            border-radius: 14px;
+            position: relative;
+            z-index: 2;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            top: 1px; right: 1px; bottom: 1px; left: 1px;
+            border-radius: 20px;
+            background-image: linear-gradient(rgba(18, 29, 47, 0.35), rgba(18, 29, 47, 0.92));
+            pointer-events: none;
+        }
+        .hero-image::after {
+            content: "";
+            position: absolute;
+            top: -8px; right: -8px; bottom: -8px; left: -8px;
+            border-radius: 24px;
+            background-image: radial-gradient(280px 180px at 65% 20%, rgba(0, 255, 255, 0.22), transparent 60%), radial-gradient(260px 170px at 25% 80%, rgba(0, 240, 255, 0.18), transparent 62%);
+            filter: blur(2px);
+            pointer-events: none;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin: 22px 0 32px;
+        }
+        .info-card, .content-card {
+            background: rgba(15, 27, 45, 0.88);
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 0 18px rgba(0, 240, 255, 0.06);
+        }
+        .info-card span {
+            display: block;
+            color: #b8c8d8;
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+        .info-card strong {
+            font-size: 18px;
+            color: #fff;
+        }
+        .content-card {
+            margin: 18px 0 26px;
+        }
+        .content-card h2, .rules h2 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 28px;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+        .step-num {
+            font-size: 25px;
+            color: aqua;
+            font-weight: 800;
+        }
+        .rules {
+            margin: 54px 0 40px 0;
+        }
+        .rules-ol {
+            margin: 0;
+            padding: 0 0 0 22px;
+        }
+        .rules-ol li {
+            margin: 0 0 12px;
+            padding: 0 0 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            line-height: 1.65;
+            color: var(--text);
+            font-size: 15px;
+        }
+        .rules-ol li::marker {
+            color: var(--sub);
+            font-weight: 900;
+        }
+        .rules-ol li:last-child {
+            border-bottom: none;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            font-size: 14px;
+        }
+        .data-table th, .data-table td {
+            padding: 11px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            text-align: left;
+        }
+        .data-table th {
+            background: rgba(0, 240, 255, 0.12);
+            color: #fff;
+        }
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .games-list {
+            columns: 3;
+            column-gap: 30px;
+            padding-left: 22px;
+            margin: 0;
+        }
+        .games-list li {
+            break-inside: avoid;
+            margin: 0 0 8px;
+            color: var(--text);
+        }
+        .footer {
+            padding: 22px 0;
+            color: #b9c5d2;
+            font-size: 12px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        @media(max-width:768px) {
+            .hero { grid-template-columns: 1fr; gap: 14px; }
+            .hero-image { max-width: 100%; justify-self: stretch; order: -1; }
+            .info-grid, .steps { grid-template-columns: 1fr 1fr; }
+            .games-list { columns: 2; }
+            .data-table { font-size: 12px; }
+            .data-table th, .data-table td { padding: 8px 6px; }
+        }
+        @media(max-width:480px) {
+            .info-grid, .steps { grid-template-columns: 1fr; }
+            .games-list { columns: 1; }
+            .info-card strong { font-size: 17px; }
+        }
+    </style>
+</head>
+<body id="ibng">
+    <main class="page">
+        <header class="header">
+            <div class="brand">
+                <a href="#" rel="noopener" class="brand-link">
+                    <img src="https://cdn.prod.website-files.com/68ad80d65417514646edf3a3/68adb798dfed270f5040c714_logowhite.png" alt="RadissonBet">
+                </a>
+                <span class="brand-slogan">PRAGMATIC PLAY · PLAY WITH KEVIN</span>
+            </div>
+        </header>
+
+        <div class="neon-divider" aria-hidden="true"></div>
+
+        <section class="hero">
+            <div>
+                <div class="eyebrow">PRAGMATIC PLAY · ÇİFT ETKİNLİK</div>
+                <h1>PLAY WITH KEVIN <span style="color:aqua"><br>SLOT & CANLI CASINO!</span></h1>
+                <p class="hero-copy"><strong>Pragmatic Play Slot oyunlarında K-E-V-I-N harflerini, Canlı Casino oyunlarında P-L-A-Y harflerini toplayın; sandıklardan 50'ye varan Ücretsiz Fiş kazanın!</strong></p>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/DHNT2bXB/promo.jpg" alt="RadissonBet PLAY with KEVIN Turnuvası">
+            </div>
+        </section>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <span>Başlangıç Tarihi</span>
+                <strong>19.10.2026 - 11:00 TSİ</strong>
+            </div>
+            <div class="info-card">
+                <span>Bitiş Tarihi</span>
+                <strong>02.11.2026 - 10:59 TSİ</strong>
+            </div>
+            <div class="info-card">
+                <span>Kazanım Tipi</span>
+                <strong>Harf Toplama (P-L-A-Y & K-E-V-I-N)</strong>
+            </div>
+            <div class="info-card">
+                <span>Maksimum Ödül Hakkı</span>
+                <strong>Oyuncu Başı Toplam Ödül</strong>
+            </div>
+            <div class="info-card">
+                <span>Ödül Türü</span>
+                <strong>Ücretsiz Fiş (Free Chips)</strong>
+            </div>
+            <div class="info-card">
+                <span>Çevrim Şartı</span>
+                <strong>Nakit (Çevrimsiz)</strong>
+            </div>
+        </div>
+
+        <section class="content-card">
+            <h2>Nasıl Kazanırsınız?</h2>
+            <p>Slotlarda K-E-V-I-N, Canlı Casino'da P-L-A-Y harflerini tamamlayarak sandıkları açın.</p>
+            <div class="steps">
+                <div>
+                    <div class="step-num">01</div>
+                    <h3>Oyununuzu Seçin</h3>
+                    <p>Tüm Pragmatic Play Slot oyunlarında veya seçili Canlı Casino masalarında gerçek parayla bahis yapın.</p>
+                </div>
+                <div>
+                    <div class="step-num">02</div>
+                    <h3>Harfleri Toplayın</h3>
+                    <p>Slotlarda <strong>K-E-V-I-N</strong>, Canlı Casino'da <strong>P-L-A-Y</strong> harflerini rastgele tetikleyerek biriktirin.</p>
+                </div>
+                <div>
+                    <div class="step-num">03</div>
+                    <h3>Sandık Seç & Kazan</h3>
+                    <p>Harfleri tamamladığınızda ekranda beliren sandıklardan birini seçerek 50'ye varan Ücretsiz Fiş kazanın!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>Dağıtılan Ödüller</h2>
+            <p>Sandıklardan çıkabilecek rastgele Ücretsiz Fiş ödül adetleri ve miktarları:</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Etkinlik Türü</th>
+                        <th>Toplam Ödül Adedi</th>
+                        <th>Kazanılacak Ödül</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Canlı Casino (PLAY)</strong></td>
+                        <td>200.000 Adet</td>
+                        <td>10 x 0,20€ Ücretsiz Fiş</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canlı Casino (PLAY)</strong></td>
+                        <td>10.000 Adet</td>
+                        <td>50 x 0,20€ Ücretsiz Fiş</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Slot Oyunları (KEVIN)</strong></td>
+                        <td>200.000 Adet</td>
+                        <td>10 x 0,20€ Ücretsiz Fiş</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Slot Oyunları (KEVIN)</strong></td>
+                        <td>15.000 Adet</td>
+                        <td>50 x 0,20€ Ücretsiz Fiş</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-card">
+            <h2>Promosyona Dâhil Canlı Casino Masaları</h2>
+            <p>Canlı Casino harf toplama (PLAY) etkinlik oyunları ve slot kazançlarının kullanılabileceği masalar:</p>
+            <ul class="games-list">
+                <li><strong>Gates of Olympus Rulet</strong></li>
+                <li><strong>Amazing Baccarat</strong></li>
+                <li><strong>Mega Çark</strong></li>
+                <li><strong>Mega Rulet</strong></li>
+                <li><strong>Money Time</strong></li>
+                <li><strong>Sweet Bonanza CandyLand</strong></li>
+            </ul>
+        </section>
+
+        <section class="rules">
+            <h2>Genel Kurallar ve Şartlar</h2>
+            <p>Promosyona katılmadan önce lütfen aşağıdaki şartları dikkatlice inceleyin.</p>
+            <ol class="rules-ol">
+                <li><strong>PLAY with KEVIN</strong> promosyonu, 19 Ekim 2026 saat 10:00 CEST (11:00 TSİ) ile 2 Kasım 2026 saat 08:59 CET (10:59 TSİ) tarihleri arasında geçerlidir.</li>
+                <li>Bu promosyon Pragmatic Play tarafından düzenlenen ortak bir network promosyonudur.</li>
+                <li>Promosyon tüm Pragmatic Play Slot oyunlarında ve belirtilen seçili Canlı Casino oyunlarında geçerlidir.</li>
+                <li>Rastgele bir ödüle hak kazanmak için gerçek parayla bahis yapılması ve Slotlarda <strong>K, E, V, I, N</strong>, Canlı Casino'da ise <strong>P, L, A, Y</strong> harflerinin tamamının toplanması gerekmektedir.</li>
+                <li>Her bir geçerli turda/spinde en fazla 1 (bir) harf tetiklenebilir. Kelimeler tamamlanana kadar ilerlemeniz saklanır.</li>
+                <li>Tüm harfler toplandığında ekranda sandıklar görünür. Oyuncu bir sandık seçerek ödülünü açığa çıkarır.</li>
+                <li>Slotlarda kazanılan Ücretsiz Fişleri aktifleştirmek için açılan penceredeki yönlendirmeleri takip edebilir veya Canlı Casino masalarında kullanabilirsiniz.</li>
+                <li>Ücretsiz Fişler verildikten sonra maksimum <strong>48 saat</strong> içerisinde kullanılmalıdır. Süresi dolan fişler iptal edilir.</li>
+                <li>Oyun turu başına maksimum <strong>4 (dört) Ücretsiz Fiş</strong> ile bahis alınabilir.</li>
+                <li>Ücretsiz Fişlerden elde edilebilecek maksimum kazanç limitleri:
+                    <br>- 10 x 0,2€ fiş ödülü için maksimum <strong>20€</strong>
+                    <br>- 50 x 0,2€ fiş ödülü için maksimum <strong>100€</strong>
+                </li>
+                <li>Kazanılan Ücretsiz Fiş kazançları herhangi bir çevrim şartı olmaksızın doğrudan <strong>nakit</strong> olarak hesaba aktarılır.</li>
+                <li>Pragmatic Play ve RadissonBet kampanya kural ve şartlarını değiştirme, durdurma veya kötüye kullanım durumunda kazançları iptal etme hakkını saklı tutar.</li>
+            </ol>
+        </section>
+
+        <footer class="footer">
+            © RadissonBet · 18+ · Sorumlu Oyun
+        </footer>
+    </main>
+</body>
+</html>

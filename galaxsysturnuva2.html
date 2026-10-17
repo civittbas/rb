@@ -1,193 +1,22 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadissonBet GALAXSYS Slot Royale Turnuvası — 1.000.000,00€ Ödül Havuzu</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Manrope, sans-serif; color: var(--text); background-image: linear-gradient(rgba(18, 29, 47, 0.85), rgba(18, 29, 47, 0.85)), url("https://i.ibb.co/r2mmChXD/1920x1800-20260113171928904-20260119234923247-2.webp"); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }
-:root { --bg: #121d2f; --text: #eeeeee; --sub: #fff; --aqua: aqua; --red: #ff2b2b; }
-.page { max-width: 1200px; margin: 0 auto; padding: 16px; }
-.header { display: flex; justify-content: flex-start; align-items: center; gap: 14px; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 10px; }
-.brand img { height: 42px; display: block; }
-.brand-slogan { font-weight: 600; color: rgba(238, 238, 238, 0.85); font-size: 13px; line-height: 1; }
-.neon-divider { margin: 16px 0 28px 0; height: 12px; border-radius: 999px; background: linear-gradient(90deg, rgba(0, 240, 255, 0), rgba(3, 46, 115, 0.85), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.85), rgba(0, 240, 255, 0)); position: relative; box-shadow: #fff 0 0 13px, rgba(0, 255, 255, 0.22) 0 0 46px; overflow: hidden; }
-.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
-.hero-image img { width: 100%; border-radius: 14px; display: block; object-fit: cover; }
-.hero h1 { font-family: Sora, sans-serif; font-size: clamp(27px, 4vw, 42px); line-height: 1.15; margin: 8px 0 14px; color: var(--text); }
-.hero-copy { font-size: 17px; line-height: 1.65; color: rgba(238, 238, 238, 0.86); }
-.hero-image { max-width: 560px; justify-self: end; position: relative; padding: 5px; border-radius: 18px; background: conic-gradient(from 210deg, rgba(3, 46, 115, 0.95), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.95), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.95)); }
-.info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 22px 0 32px; }
-.info-card, .content-card { background: rgba(15, 27, 45, 0.88); border: 1px solid rgba(0, 240, 255, 0.25); border-radius: 14px; padding: 18px; box-shadow: 0 0 18px rgba(0, 240, 255, 0.06); }
-.info-card span { display: block; color: #b8c8d8; font-size: 12px; margin-bottom: 7px; }
-.info-card strong { font-size: 18px; color: #fff; }
-.content-card { margin: 18px 0 26px; }
-.content-card h2, .rules h2 { color: #fff; margin-top: 0; font-size: 28px; }
-.eyebrow { color: aqua; font-weight: 800; letter-spacing: 0.08em; }
-.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.step-num { font-size: 25px; color: aqua; font-weight: 800; }
-.data-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 14px; }
-.data-table th, .data-table td { padding: 11px 12px; border: 1px solid rgba(255, 255, 255, 0.22); text-align: left; }
-.data-table th { background: rgba(0, 240, 255, 0.12); color: #fff; }
-.data-table tr:nth-child(even) { background: rgba(255, 255, 255, 0.04); }
-.games-list { columns: 3; column-gap: 30px; padding-left: 22px; }
-.games-list li { break-inside: avoid; margin: 0 0 8px; }
-.rules { margin: 54px 0 40px; }
-.rules-ol { margin: 0; padding-left: 22px; }
-.rules-ol li { margin: 0 0 12px; padding: 0 0 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); line-height: 1.65; font-weight: 800; color: var(--text); font-size: 16px; }
-.footer { padding: 22px 0; color: #b9c5d2; font-size: 12px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.15); }
-@media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; gap: 14px; }
-  .hero-image { max-width: 100%; justify-self: stretch; order: -1; }
-  .info-grid, .steps { grid-template-columns: 1fr 1fr; }
-  .games-list { columns: 2; }
-  .data-table { font-size: 12px; }
-  .data-table th, .data-table td { padding: 8px 6px; }
-}
-@media (max-width: 480px) {
-  .info-grid, .steps { grid-template-columns: 1fr; }
-  .games-list { columns: 1; }
-}
-</style>
-</head>
-<body>
-<main class="page">
-<header class="header">
-  <div class="brand">
-    <a href="#" class="brand-link"><img src="https://cdn.prod.website-files.com/68ad80d65417514646edf3a3/68adb798dfed270f5040c714_logowhite.png" alt="RadissonBet"></a>
-    <span class="brand-slogan">GALAXSYS · SLOT ROYALE</span>
-  </div>
-</header>
-<div class="neon-divider" aria-hidden="true"></div>
-
-<section class="hero">
-  <div>
-    <div class="eyebrow">GALAXSYS · SLOT ROYALE</div>
-    <h1>1.000.000,00€ <span style="color:aqua">ÖDÜL HAVUZU</span></h1>
-    <p class="hero-copy"><strong>GALAXSYS sağlayıcısından toplam 1.000.000,00€ ödül havuzlu Slot Royale Turnuvası RadissonBet'te!</strong></p>
-  </div>
-  <div class="hero-image">
-    <img src="https://i.ibb.co/1fFQZf10/promo.jpg" alt="RadissonBet GALAXSYS Slot Royale Turnuvası — 1.000.000,00€ Ödül Havuzu">
-  </div>
-</section>
-
-<div class="info-grid">
-  <div class="info-card"><span>Başlangıç Tarihi</span><strong>05.10.2026</strong></div>
-  <div class="info-card"><span>Bitiş Tarihi</span><strong>14.12.2026</strong></div>
-  <div class="info-card"><span>Minimum Bahis</span><strong>0,20€</strong></div>
-  <div class="info-card"><span>Aşama Sayısı</span><strong>5 Aşama</strong></div>
-  <div class="info-card"><span>Her Aşamada</span><strong>200.000,00€</strong></div>
-  <div class="info-card"><span>Çevrim Şartı</span><strong>1 Kat</strong></div>
-</div>
-
-<section class="content-card">
-  <h2>Nasıl Katılınır?</h2>
-  <p>GALAXSYS'in geçerli oyunlarında turnuvaya katılın.</p>
-  <div class="steps">
-    <div>
-      <div class="step-num">01</div>
-      <h3>Geçerli Oyununu Seç</h3>
-      <p>Aşağıdaki listede yer alan GALAXSYS oyunlarından birinde bahis alın.</p>
-    </div>
-    <div>
-      <div class="step-num">02</div>
-      <h3>Minimum Bahis Şartını Sağla</h3>
-      <p>Turnuvaya katılım için en az <strong>0,20€</strong> bahis alın. Puanlar her aşama boyunca birikir.</p>
-    </div>
-    <div>
-      <div class="step-num">03</div>
-      <h3>Liderlik Tablosunda Yerini Al</h3>
-      <p>Her aşamada uygunluk şartlarını sağlayan ilk <strong>500 oyuncuya</strong> ödül verilir.</p>
-    </div>
-  </div>
-</section>
-
-<section class="rules">
-  <h2>Genel Kurallar ve Şartlar</h2>
-  <p>Turnuvaya katılmadan önce kuralları inceleyin.</p>
-  <h3>RadissonBet Slot Royale Turnuvası Şartları</h3>
-  <ol class="rules-ol">
-    <li>Turnuvaya katılım sağlamak için Galaxsys sağlayıcısının geçerli oyunlarında bahis almanız gerekmektedir.</li>
-    <li>Turnuvaya katılım için minimum bahis şartı <strong>0,20€</strong>'dur.</li>
-    <li>Turnuva toplam <strong>5 aşamadan</strong> oluşmaktadır. Her bir aşamada <strong>200.000,00€</strong> ödül dağıtılmaktadır. Aşama süreçleri aşağıdaki takvimde belirtilmiştir.</li>
-    <li>Her aşamada kümülatif liderlik tablosu bulunur. Yani puanlar, aşama boyunca herhangi bir ara tur veya sıfırlama olmaksızın birikir.</li>
-    <li>Aşama sona erdikten sonra sonuçlar doğrulanır, uygunluk şartlarını sağlayan ilk 500 oyuncuya ödülleri verilir ve bir sonraki aşama başlamadan önce liderlik tablosu sıfırlanır.</li>
-    <li>Ödül aktarımı, ilgili aşamanın sona ermesinden ve liderlik tablosunun doğrulanmasından sonra, <strong>72 saat içinde</strong> tamamlanır.</li>
-    <li>Aktarılan turnuva kazancının <strong>1 katı çevrim şartı</strong> mevcuttur. Çevrim şartı tamamlandıktan sonra eklenen nakit ödülün <strong>maksimum 10 katına kadar</strong> çekim işlemi yapılmaktadır. Üzeri tutarlar otomatik olarak düzenlenecektir.</li>
-    <li><strong>GALAXSYS ve RadissonBet</strong> bu promosyonu dilediği zaman değiştirme veya iptal etme hakkını saklı tutar.</li>
-    <li>Tüm kurallar <strong>RadissonBet Genel Hüküm ve Koşullarını</strong> içerir.</li>
-  </ol>
-</section>
-
-<section class="content-card">
-  <h2>Aşama Takvimi</h2>
-  <p>Her aşamada 200.000,00€ ödül dağıtılır.</p>
-  <table class="data-table">
-    <thead>
-      <tr><th colspan="3">Slot Royale Turnuva Aşamaları</th></tr>
-      <tr><th>Aşama</th><th>Başlangıç</th><th>Bitiş</th></tr>
-    </thead>
-    <tbody>
-      <tr><td><strong>1. Aşama</strong></td><td>5 Ekim 2026, 15:00</td><td>12 Ekim 2026, 14:50</td></tr>
-      <tr><td><strong>2. Aşama</strong></td><td>12 Ekim 2026, 15:00</td><td>26 Ekim 2026, 14:50</td></tr>
-      <tr><td><strong>3. Aşama</strong></td><td>26 Ekim 2026, 15:00</td><td>9 Kasım 2026, 14:50</td></tr>
-      <tr><td><strong>4. Aşama</strong></td><td>9 Kasım 2026, 15:00</td><td>23 Kasım 2026, 14:50</td></tr>
-      <tr><td><strong>5. Aşama</strong></td><td>23 Kasım 2026, 15:00</td><td>14 Aralık 2026, 14:50</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section class="content-card">
-  <h2>Geçerli Oyunlar</h2>
-  <p>Turnuvaya dahil olan GALAXSYS oyunları.</p>
-  <ul class="games-list">
-    <li><strong>Olympian Legends</strong></li>
-    <li><strong>Egyptian Legends</strong></li>
-    <li><strong>Fruity Wilds</strong></li>
-    <li><strong>Fruity Wilds 5 Lines</strong></li>
-    <li><strong>Fruity Wilds 10 Lines</strong></li>
-    <li><strong>Coin Rush</strong></li>
-    <li><strong>Rise of Frog: Book of Legacy</strong></li>
-    <li><strong>Guardians of Glory</strong></li>
-    <li><strong>Hungry Wolf</strong></li>
-    <li><strong>Fruity Lines</strong></li>
-    <li><strong>Gangsta Piggy: Hold and Win</strong></li>
-    <li><strong>Gates of Asgard: nine realms</strong></li>
-    <li><strong>Deep Sea wild</strong></li>
-  </ul>
-</section>
-
-<section class="content-card">
-  <h2>Ödül Dağıtımı (Her Aşama)</h2>
-  <p>Her aşamada uygunluk şartlarını sağlayan ilk 500 oyuncu ödüllendirilir.</p>
-  <table class="data-table">
-    <thead>
-      <tr><th colspan="2">Her Aşama İçin 200.000,00€ Ödül Havuzu</th></tr>
-      <tr><th>SIRALAMA</th><th>ÖDÜL MİKTARI</th></tr>
-    </thead>
-    <tbody>
-      <tr><td><strong>1</strong></td><td><strong>27.500 €</strong></td></tr>
-      <tr><td>2</td><td>15.000 €</td></tr>
-      <tr><td>3</td><td>10.000 €</td></tr>
-      <tr><td>4</td><td>7.500 €</td></tr>
-      <tr><td>5</td><td>5.000 €</td></tr>
-      <tr><td>6-10</td><td>3.000 €</td></tr>
-      <tr><td>11-20</td><td>2.000 €</td></tr>
-      <tr><td>21-50</td><td>1.000 €</td></tr>
-      <tr><td>51-100</td><td>500 €</td></tr>
-      <tr><td>101-200</td><td>250 €</td></tr>
-      <tr><td>201-300</td><td>100 €</td></tr>
-      <tr><td>301-500</td><td>50 €</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<footer class="footer">
-  © RadissonBet · 18+ · Sorumlu oyun
-</footer>
-</main>
-</body>
-</html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RadissonBet GALAXSYS Casino Masters Turnuvası — 200.000,00€ Ödül Havuzu</title><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><style>* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-family:Manrope, sans-serif;color:var(--text);background-image:linear-gradient(rgba(18, 29, 47, 0.85), rgba(18, 29, 47, 0.85)), url("https://i.ibb.co/r2mmChXD/1920x1800-20260113171928904-20260119234923247-2.webp");background-position-x:0%, center;background-position-y:0%, center;background-size:auto, cover;background-repeat:repeat, no-repeat;background-attachment:scroll, fixed;background-origin:padding-box, padding-box;background-clip:border-box, border-box;background-color:transparent;}:root{--bg:#121d2f;--text:#eeeeee;--sub:#fff;--aqua:aqua;--red:#ff2b2b;}.page{max-width:1200px;margin-top:0px;margin-right:auto;margin-bottom:0px;margin-left:auto;padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px;}.header{display:flex;justify-content:flex-start;align-items:center;row-gap:14px;column-gap:14px;flex-wrap:wrap;}.brand a{display:inline-block;align-items:center;row-gap:10px;column-gap:10px;}.brand img{height:42px;display:block;}.brand{display:flex;align-items:center;row-gap:10px;column-gap:10px;flex-wrap:nowrap;justify-content:flex-start;}.brand-slogan{font-weight:600;color:rgba(238, 238, 238, 0.85);font-size:13px;white-space-collapse:collapse;text-wrap-mode:nowrap;line-height:1;}.brand-slogan strong{color:var(--sub);font-weight:800;}.neon-divider{margin-top:16px;margin-right:0px;margin-bottom:28px;margin-left:0px;height:12px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;background-image:linear-gradient(90deg, rgba(0, 240, 255, 0), rgba(3, 46, 115, 0.85), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.85), rgba(0, 240, 255, 0));background-position-x:0%;background-position-y:0%;background-size:auto;background-repeat:repeat;background-attachment:scroll;background-origin:padding-box;background-clip:border-box;background-color:transparent;position:relative;box-shadow:rgb(255, 255, 255) 0px 0px 13px, rgba(0, 255, 255, 0.22) 0px 0px 46px;overflow-x:hidden;overflow-y:hidden;}.hero{display:grid;grid-template-columns:1fr 1fr;row-gap:28px;column-gap:28px;align-items:center;}.hero-image img{width:100%;border-top-left-radius:14px;border-top-right-radius:14px;border-bottom-right-radius:14px;border-bottom-left-radius:14px;position:relative;z-index:2;height:auto;display:block;object-fit:cover;}.brand-link{display:flex;align-items:center;row-gap:10px;column-gap:10px;white-space-collapse:collapse;text-wrap-mode:nowrap;text-decoration-line:none;text-decoration-thickness:auto;text-decoration-style:solid;text-decoration-color:currentcolor;}.hero h1{font-family:Sora, sans-serif;font-size:36px;margin-top:0px;margin-right:0px;margin-bottom:10px;margin-left:0px;color:var(--text);}.hero .accent{color:var(--sub);text-shadow:rgba(0, 240, 255, 0.22) 0px 0px 12px;}.hero-image{max-width:560px;justify-self:end;position:relative;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px;border-top-left-radius:18px;border-top-right-radius:18px;border-bottom-right-radius:18px;border-bottom-left-radius:18px;background-image:linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)), conic-gradient(from 210deg, rgba(3, 46, 115, 0.95), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.95), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.95));background-position-x:0%, 0%;background-position-y:0%, 0%;background-size:auto, auto;background-repeat:repeat, repeat;background-attachment:scroll, scroll;background-origin:padding-box, padding-box;background-clip:border-box, border-box;background-color:transparent;}.rules h2{margin-top:0px;margin-right:0px;margin-bottom:18px;margin-left:0px;font-size:28px;color:var(--text);}.rules-ol li{padding-top:14px;padding-right:0px;padding-bottom:14px;padding-left:0px;border-bottom-width:1px;border-bottom-style:dashed;border-bottom-color:rgba(0, 240, 255, 0.16);font-weight:800;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;color:var(--text);font-size:16px;line-height:1.55;}.header-btn span{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;row-gap:6px;column-gap:6px;}.neon-divider::before{content:"";position:absolute;top:2px;right:2px;bottom:2px;left:2px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;background-image:linear-gradient(rgba(18, 29, 47, 0.55), rgba(18, 29, 47, 0.9));background-position-x:0%;background-position-y:0%;background-size:auto;background-repeat:repeat;background-attachment:scroll;background-origin:padding-box;background-clip:border-box;background-color:transparent;}.neon-divider::after{content:"";position:absolute;top:0px;bottom:0px;left:-40%;width:45%;background-image:linear-gradient(90deg, transparent, rgba(52, 67, 249, 0.55), transparent);background-position-x:0%;background-position-y:0%;background-size:auto;background-repeat:repeat;background-attachment:scroll;background-origin:padding-box, padding-box;background-clip:border-box, border-box;background-color:transparent;filter:blur(1px);animation-duration:2.8s;animation-timing-function:ease-in-out;animation-delay:0s;animation-iteration-count:infinite;animation-direction:normal;animation-fill-mode:none;animation-play-state:running;animation-name:sweep;animation-timeline:auto;animation-range-start:normal;animation-range-end:normal;opacity:0.75;}.hero p{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;color:rgba(238, 238, 238, 0.86);font-size:16px;}.hero-image::before{content:"";position:absolute;top:1px;right:1px;bottom:1px;left:1px;border-top-left-radius:20px;border-top-right-radius:20px;border-bottom-right-radius:20px;border-bottom-left-radius:20px;background-image:linear-gradient(rgba(18, 29, 47, 0.35), rgba(18, 29, 47, 0.92));background-position-x:0%;background-position-y:0%;background-size:auto;background-repeat:repeat;background-attachment:scroll;background-origin:padding-box;background-clip:border-box;background-color:transparent;pointer-events:none;}.hero-image::after{content:"";position:absolute;top:-8px;right:-8px;bottom:-8px;left:-8px;border-top-left-radius:24px;border-top-right-radius:24px;border-bottom-right-radius:24px;border-bottom-left-radius:24px;background-image:radial-gradient(280px 180px at 65% 20%, rgba(0, 255, 255, 0.22), transparent 60%), radial-gradient(260px 170px at 25% 80%, rgba(0, 240, 255, 0.18), transparent 62%);background-position-x:0%, 0%;background-position-y:0%, 0%;background-size:auto, auto;background-repeat:repeat, repeat;background-attachment:scroll, scroll;background-origin:padding-box, padding-box;background-clip:border-box, border-box;background-color:transparent;filter:blur(2px);pointer-events:none;}.rules{margin-top:54px;margin-right:0px;margin-bottom:40px;margin-left:0px;}.rules-ol{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:22px;}.rules-ol li::marker{color:var(--sub);font-weight:900;}.rules-ol li:last-child{border-bottom-width:medium;border-bottom-style:none;border-bottom-color:currentcolor;}.mobile-neon{display:none;}#ibng{background-image:url('https://sport.cmsdigi.com/App_Data/084fbfcc-bd46-423e-ae29-5b998430504a/Files/promosyon-arkaplan.jpg');background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;}#in6k8-2{text-align:center;}#ihdnwh{width:100%;border-collapse:collapse;}#i7s84n{width:100%;border-collapse:collapse;}#ihjgu-3{width:100%;border-collapse:collapse;}#i1je8-3{width:100%;border-collapse:collapse;}#ii6vmb{width:100%;border-collapse:collapse;}#i97ail{width:100%;border-collapse:collapse;}#ijivvo{width:100%;border-collapse:collapse;}#i1cznf{width:100%;border-collapse:collapse;}#irxbso{width:100%;border-collapse:collapse;}#i8xbi4{width:100%;border-collapse:collapse;}#iayqlg{width:100%;border-collapse:collapse;}#i5ep4n{width:100%;border-collapse:collapse;}#iemlfi{width:100%;border-collapse:collapse;}#ip4jdi{width:100%;border-collapse:collapse;display:none;}#iippoa{width:100%;border-collapse:collapse;}#i88g4e{border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(255, 255, 255);border-right-color:rgb(255, 255, 255);border-bottom-color:rgb(255, 255, 255);border-left-color:rgb(255, 255, 255);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px;}#i1tdm3{width:100%;border-collapse:collapse;}#iptozg{width:100%;border-collapse:collapse;}#i7sd4o{width:100%;border-collapse:collapse;}#iu3agu{width:100%;border-collapse:collapse;}#ieg5ol{width:100%;border-collapse:collapse;}#iefkvk{width:100%;border-collapse:collapse;}#ihn5ev{width:100%;border-collapse:collapse;}#ip69jn{width:100%;border-collapse:collapse;}#il95p2{width:100%;border-collapse:collapse;}#i6tgg1{font-weight:normal;}#i3tymr{font-weight:400;}@keyframes sweep{0%{transform:translateX(0px);}100%{transform:translateX(220%);}}@media (max-width: 768px){.header{flex-wrap:wrap;justify-content:flex-start;}.hero{grid-template-columns:1fr;row-gap:14px;padding-top:12px;}.brand-slogan{font-size:11.5px;}.hero-image{max-width:100%;justify-self:stretch;order:-2;}.header-btn .emoji{font-size:16px;}.hero h1{font-size:26px;}.hero p{font-size:15px;}.header-btn .btn-inner{justify-content:center;}.header-btn .label{white-space-collapse:collapse;text-wrap-mode:nowrap;}.mobile-neon{display:block;order:-1;margin-top:8px;margin-bottom:0px;}}@media (max-width: 480px){#ibng{background-image:url('https://sport.cmsdigi.com/App_Data/084fbfcc-bd46-423e-ae29-5b998430504a/Files/promosyon-arkaplan.jpg');background-repeat:repeat;background-position:left top;background-attachment:fixed;background-size:auto;}}@media (max-width: 380px){.brand-slogan{max-width:160px;overflow-x:hidden;overflow-y:hidden;text-overflow:ellipsis;}}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0 32px}.info-card,.content-card{background:rgba(15,27,45,.88);border:1px solid rgba(0,240,255,.25);border-radius:14px;padding:18px;box-shadow:0 0 18px rgba(0,240,255,.06)}.info-card span{display:block;color:#b8c8d8;font-size:12px;margin-bottom:7px}.info-card strong{font-size:18px;color:#fff}.content-card{margin:18px 0 26px}.content-card h2,.rules h2{color:#fff;margin-top:0}.eyebrow{color:aqua;font-weight:800;letter-spacing:.08em}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.step-num{font-size:25px;color:aqua;font-weight:800}.data-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}.data-table th,.data-table td{padding:11px 12px;border:1px solid rgba(255,255,255,.22);text-align:left}.data-table th{background:rgba(0,240,255,.12);color:#fff}.data-table tr:nth-child(even){background:rgba(255,255,255,.04)}.games-list{columns:3;column-gap:30px;padding-left:22px}.games-list li{break-inside:avoid;margin:0 0 8px}.rules-ol li{margin:0 0 12px;padding:0 0 12px;border-bottom:1px solid rgba(255,255,255,.12);line-height:1.65}.hero h1{font-size:clamp(27px,4vw,42px);line-height:1.15;margin:8px 0 14px}.hero-copy{font-size:17px;line-height:1.65}.updated-link{display:inline-block;margin:8px 0 18px;color:aqua;font-weight:800;text-decoration:none}.footer{padding:22px 0;color:#b9c5d2;font-size:12px;text-align:center;border-top:1px solid rgba(255,255,255,.15)}@media(max-width:768px){.info-grid,.steps{grid-template-columns:1fr 1fr}.games-list{columns:2}.data-table{font-size:12px}.data-table th,.data-table td{padding:8px 6px}}@media(max-width:480px){.info-grid,.steps{grid-template-columns:1fr}.games-list{columns:1}.info-card strong{font-size:17px}}</style></head><body id="ibng"><main class="page">
+<header class="header"><div class="brand"><a href="#" rel="noopener" class="brand-link"><img src="https://cdn.prod.website-files.com/68ad80d65417514646edf3a3/68adb798dfed270f5040c714_logowhite.png" alt="RadissonBet"></a><span class="brand-slogan">GALAXSYS · CASINO MASTERS</span></div></header><div class="neon-divider" aria-hidden="true"></div>
+<section class="hero"><div><div class="eyebrow">GALAXSYS · CASINO MASTERS</div><h1>200.000,00€ <span style="color:aqua">ÖDÜL HAVUZU</span></h1><p class="hero-copy"><strong>GALAXSYS sağlayıcısından 200.000,00€ ödül havuzlu Casino Masters Turnuvası RadissonBet'te!</strong></p></div><div class="hero-image"><img src="https://i.ibb.co/SwBqppnd/promo.jpg" alt="RadissonBet GALAXSYS Casino Masters Turnuvası — 200.000,00€ ödül havuzu"></div></section>
+<div class="info-grid"><div class="info-card"><span>Başlangıç Tarihi</span><strong>07.10.2026</strong></div><div class="info-card"><span>Bitiş Tarihi</span><strong>03.11.2026</strong></div><div class="info-card"><span>Minimum Bahis</span><strong>0,20€</strong></div><div class="info-card"><span>Turnuva Süreci</span><strong>4 Aşama</strong></div><div class="info-card"><span>Her Aşamada</span><strong>50.000,00€</strong></div><div class="info-card"><span>Toplam Ödül Havuzu</span><strong>200.000,00€</strong></div></div>
+<section class="content-card"><h2>Nasıl Katılınır?</h2><p>Geçerli oyunlarda gerçek para bahisleriyle turnuva puanı kazanın.</p><div class="steps"><div><div class="step-num">01</div><h3>Geçerli Oyunu Seç</h3><p>Galaxsys sağlayıcısının aşağıda listelenen casino oyunlarından birini seçin.</p></div><div><div class="step-num">02</div><h3>Gerçek Para ile Bahis Al</h3><p>Minimum <strong>0,20€</strong> geçerli bahis tutarıyla katılın. Her <strong>1€</strong> geçerli bahis, 1 turnuva puanı olarak hesaplanır.</p></div><div><div class="step-num">03</div><h3>Liderlik Tablosunda Yer Al</h3><p>Her aşamada ilk <strong>50 oyuncuya</strong> ödül verilir. Ödüller doğrulamanın ardından <strong>72 saat içerisinde</strong> aktarılır.</p></div></div></section>
+<section class="rules"><h2>Genel Kurallar ve Şartlar</h2><p>Turnuvaya katılmadan önce kuralları inceleyin.</p><h3>RadissonBet Casino Masters Turnuvası Şartları</h3><ol class="rules-ol">
+<li>Turnuvaya katılım sağlamak için <strong>Galaxsys</strong> sağlayıcısının geçerli casino oyunlarında <strong>gerçek para ile bahis</strong> almanız gerekmektedir.</li>
+<li>Turnuvaya katılım için minimum geçerli bahis tutarı <strong>0,20€</strong>'dur.</li>
+<li>Turnuva toplam <strong>4 aşamadan</strong> oluşmaktadır. Her bir aşamada <strong>50.000,00€</strong> ödül dağıtılmaktadır. Toplam ödül havuzu <strong>200.000,00€</strong>'dur. Aşama süreçleri aşağıdaki turnuva takviminde belirtilmiştir.</li>
+<li>Her aşamada birbirinden bağımsız bir liderlik tablosu bulunur. Her aşamanın sonunda puanlar sıfırlanır ve bir sonraki aşama için yeni bir liderlik tablosu oluşturulur.</li>
+<li>Oyuncuların liderlik tablosundaki puanları, katılımcı oyunlarda gerçekleştirdikleri geçerli gerçek para bahislerinin toplam tutarına göre hesaplanır. <strong>1€ geçerli bahis = 1 turnuva puanı</strong> olarak değerlendirilir.</li>
+<li>Aşamanın sonunda liderlik tablosu doğrulanır ve uygunluk şartlarını sağlayan oyunculara ödülleri aktarılır.</li>
+<li>Ödüller, ilgili aşamanın sona ermesi ve liderlik tablosunun doğrulanmasının ardından <strong>72 saat içerisinde</strong> aktarılır.</li>
+<li>Bir oyuncu, farklı aşamalarda gerekli sıralamayı elde etmesi halinde birden fazla aşamada ödül kazanabilir. Her aşamada toplam <strong>50 oyuncuya</strong> ödül verilir.</li>
+<li>İki veya daha fazla oyuncunun aynı puana sahip olması durumunda, söz konusu puana <strong>daha önce ulaşan oyuncu</strong> daha üst sırada yer alır.</li>
+<li><strong>GALAXSYS ve RadissonBet</strong> bu promosyonu dilediği zaman değiştirme veya iptal etme hakkını saklı tutar.</li>
+<li>Tüm kurallar <strong>RadissonBet Genel Hüküm ve Koşullarını</strong> içerir.</li></ol></section>
+<section class="content-card"><h2>Turnuva Takvimi</h2><p>Her aşama için bağımsız bir liderlik tablosu oluşturulur ve puanlar sıfırlanır.</p><table class="data-table"><thead><tr><th colspan="3">Aşama Süreçleri</th></tr><tr><th>Aşama</th><th>Başlangıç</th><th>Bitiş</th></tr></thead><tbody><tr><td><strong>1. Aşama</strong></td><td>7 Ekim 2026, 03:00</td><td>14 Ekim 2026, 02:59</td></tr><tr><td><strong>2. Aşama</strong></td><td>14 Ekim 2026, 03:00</td><td>21 Ekim 2026, 02:59</td></tr><tr><td><strong>3. Aşama</strong></td><td>21 Ekim 2026, 03:00</td><td>28 Ekim 2026, 02:59</td></tr><tr><td><strong>4. Aşama</strong></td><td>28 Ekim 2026, 03:00</td><td>4 Kasım 2026, 02:59</td></tr></tbody></table></section>
+<section class="content-card"><h2>Geçerli Oyunlar</h2><p>GALAXSYS sağlayıcısının turnuvaya dahil oyunları.</p><ul class="games-list"><li><strong>BlackJack</strong></li><li><strong>BlackJack 94</strong></li><li><strong>Roulette X</strong></li><li><strong>American Roulette</strong></li><li><strong>Hi-Lo</strong></li><li><strong>Baccarat</strong></li></ul></section>
+<section class="content-card"><h2>Ödül Dağıtımı (Her Aşama)</h2><p>Her aşamada toplam 50 oyuncuya sıralamalarına göre ödül verilir.</p><table class="data-table"><thead><tr><th colspan="2">Her Aşama İçin Ödül Tablosu</th></tr><tr><th>SIRALAMA</th><th>ÖDÜL MİKTARI</th></tr></thead><tbody><tr><td><strong>1</strong></td><td><strong>10.000 €</strong></td></tr><tr><td>2</td><td>6.000 €</td></tr><tr><td>3</td><td>5.000 €</td></tr><tr><td>4</td><td>4.000 €</td></tr><tr><td>5</td><td>3.000 €</td></tr><tr><td>6</td><td>2.400 €</td></tr><tr><td>7</td><td>2.000 €</td></tr><tr><td>8</td><td>1.800 €</td></tr><tr><td>9</td><td>1.600 €</td></tr><tr><td>10</td><td>1.200 €</td></tr><tr><td>11-20</td><td>600 €</td></tr><tr><td>21-30</td><td>400 €</td></tr><tr><td>31-40</td><td>200 €</td></tr><tr><td>41-50</td><td>100 €</td></tr></tbody></table></section>
+<footer class="footer">© RadissonBet · 18+ · Sorumlu oyun</footer></main></body></html>

@@ -1,0 +1,379 @@
+<html lang="tr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadissonBet — Cadılar Bayramı Turnuvası (Wicked Wins)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Manrope', sans-serif;
+            color: var(--text);
+            background-image: linear-gradient(rgba(18, 29, 47, 0.85), rgba(18, 29, 47, 0.85)), url("https://i.ibb.co/r2mmChXD/1920x1800-20260113171928904-20260119234923247-2.webp");
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: transparent;
+        }
+        :root {
+            --bg: #121d2f;
+            --text: #eeeeee;
+            --sub: #fff;
+            --aqua: aqua;
+            --red: #ff2b2b;
+        }
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: nowrap;
+        }
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .brand img {
+            height: 42px;
+            display: block;
+        }
+        .brand-slogan {
+            font-weight: 600;
+            color: rgba(238, 238, 238, 0.85);
+            font-size: 13px;
+            white-space: nowrap;
+            line-height: 1;
+        }
+        .neon-divider {
+            margin: 16px 0 28px 0;
+            height: 12px;
+            border-radius: 999px;
+            background-image: linear-gradient(90deg, rgba(0, 240, 255, 0), rgba(3, 46, 115, 0.85), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.85), rgba(0, 240, 255, 0));
+            position: relative;
+            box-shadow: #ffffff 0px 0px 13px, rgba(0, 255, 255, 0.22) 0px 0px 46px;
+            overflow: hidden;
+        }
+        .neon-divider::before {
+            content: "";
+            position: absolute;
+            top: 2px; right: 2px; bottom: 2px; left: 2px;
+            border-radius: 999px;
+            background-image: linear-gradient(rgba(18, 29, 47, 0.55), rgba(18, 29, 47, 0.9));
+        }
+        .neon-divider::after {
+            content: "";
+            position: absolute;
+            top: 0; bottom: 0; left: -40%;
+            width: 45%;
+            background-image: linear-gradient(90deg, transparent, rgba(52, 67, 249, 0.55), transparent);
+            filter: blur(1px);
+            animation: sweep 2.8s ease-in-out infinite;
+            opacity: 0.75;
+        }
+        @keyframes sweep {
+            0% { transform: translateX(0px); }
+            100% { transform: translateX(220%); }
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: center;
+        }
+        .eyebrow {
+            color: aqua;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(27px, 4vw, 42px);
+            line-height: 1.15;
+            margin: 8px 0 14px 0;
+            color: var(--text);
+        }
+        .hero-copy {
+            font-size: 17px;
+            line-height: 1.65;
+            color: rgba(238, 238, 238, 0.86);
+            margin: 0;
+        }
+        .hero-image {
+            max-width: 560px;
+            justify-self: end;
+            position: relative;
+            padding: 5px;
+            border-radius: 18px;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)), conic-gradient(from 210deg, rgba(3, 46, 115, 0.95), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.95), rgba(3, 46, 115, 0.55), rgba(3, 46, 115, 0.95));
+        }
+        .hero-image img {
+            width: 100%;
+            border-radius: 14px;
+            position: relative;
+            z-index: 2;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            top: 1px; right: 1px; bottom: 1px; left: 1px;
+            border-radius: 20px;
+            background-image: linear-gradient(rgba(18, 29, 47, 0.35), rgba(18, 29, 47, 0.92));
+            pointer-events: none;
+        }
+        .hero-image::after {
+            content: "";
+            position: absolute;
+            top: -8px; right: -8px; bottom: -8px; left: -8px;
+            border-radius: 24px;
+            background-image: radial-gradient(280px 180px at 65% 20%, rgba(0, 255, 255, 0.22), transparent 60%), radial-gradient(260px 170px at 25% 80%, rgba(0, 240, 255, 0.18), transparent 62%);
+            filter: blur(2px);
+            pointer-events: none;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            margin: 22px 0 32px;
+        }
+        .info-card, .content-card {
+            background: rgba(15, 27, 45, 0.88);
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 0 18px rgba(0, 240, 255, 0.06);
+        }
+        .info-card span {
+            display: block;
+            color: #b8c8d8;
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+        .info-card strong {
+            font-size: 18px;
+            color: #fff;
+        }
+        .content-card {
+            margin: 18px 0 26px;
+        }
+        .content-card h2, .rules h2 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 28px;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+        .step-num {
+            font-size: 25px;
+            color: aqua;
+            font-weight: 800;
+        }
+        .rules {
+            margin: 54px 0 40px 0;
+        }
+        .rules-ol {
+            margin: 0;
+            padding: 0 0 0 22px;
+        }
+        .rules-ol li {
+            margin: 0 0 12px;
+            padding: 0 0 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            line-height: 1.65;
+            color: var(--text);
+            font-size: 15px;
+        }
+        .rules-ol li::marker {
+            color: var(--sub);
+            font-weight: 900;
+        }
+        .rules-ol li:last-child {
+            border-bottom: none;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            font-size: 14px;
+        }
+        .data-table th, .data-table td {
+            padding: 11px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            text-align: left;
+        }
+        .data-table th {
+            background: rgba(0, 240, 255, 0.12);
+            color: #fff;
+        }
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .footer {
+            padding: 22px 0;
+            color: #b9c5d2;
+            font-size: 12px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        @media(max-width:768px) {
+            .hero { grid-template-columns: 1fr; gap: 14px; }
+            .hero-image { max-width: 100%; justify-self: stretch; order: -1; }
+            .info-grid { grid-template-columns: 1fr 1fr; }
+            .steps { grid-template-columns: 1fr; }
+            .data-table { font-size: 12px; }
+            .data-table th, .data-table td { padding: 8px 6px; }
+        }
+        @media(max-width:480px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .info-card strong { font-size: 17px; }
+        }
+    </style>
+</head>
+<body id="ibng">
+    <main class="page">
+        <header class="header">
+            <div class="brand">
+                <a href="#" rel="noopener" class="brand-link">
+                    <img src="https://cdn.prod.website-files.com/68ad80d65417514646edf3a3/68adb798dfed270f5040c714_logowhite.png" alt="RadissonBet">
+                </a>
+                <span class="brand-slogan">CADILAR BAYRAMI TURNUVASI</span>
+            </div>
+        </header>
+
+        <div class="neon-divider" aria-hidden="true"></div>
+
+        <section class="hero">
+            <div>
+                <div class="eyebrow">CADILAR BAYRAMI TURNUVASI</div>
+                <h1>WICKED WINS <span style="color:aqua"><br>55.000.000,00₺</span></h1>
+                <p class="hero-copy"><strong>Kazanmak için Halloween oyunlarımızı oynayın! 71.000’den fazla ödül ve 1.000x’e kadar çarpan ödülü RadissonBet'te sizi bekliyor.</strong></p>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/Fbw3H4M8/promo-13.jpg" alt="RadissonBet Cadılar Bayramı Turnuvası">
+            </div>
+        </section>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <span>Başlangıç</span>
+                <strong>28 Ekim 2026 - 10:01 CET</strong>
+            </div>
+            <div class="info-card">
+                <span>Bitiş</span>
+                <strong>1 Kasım 2026 - 23:59 CET</strong>
+            </div>
+            <div class="info-card">
+                <span>Toplam Ödül</span>
+                <strong>71.000+ Ödül</strong>
+            </div>
+            <div class="info-card">
+                <span>Maksimum Çarpan</span>
+                <strong>1.000x</strong>
+            </div>
+        </div>
+
+        <section class="content-card">
+            <h2>Nasıl Kazanırsınız?</h2>
+            <p>Halloween temalı seçili slot oyunlarında şansınızı deneyin ve sembolleri toplayın.</p>
+            <div class="steps">
+                <div>
+                    <div class="step-num">01</div>
+                    <h3>Bahis Yapın</h3>
+                    <p>Promosyona dâhil Halloween oyunlarının birinde gerçek parayla bahis alın.</p>
+                </div>
+                <div>
+                    <div class="step-num">02</div>
+                    <h3>Sembolleri Toplayın</h3>
+                    <p>Bal kabağı, hayalet ve şeker olmak üzere üç (3) sembolün tamamını toplayın.</p>
+                </div>
+                <div>
+                    <div class="step-num">03</div>
+                    <h3>Ödülü Kazan</h3>
+                    <p>Üç sembol tamamlandığında açılan sandıklardan 1.000x'e varan çarpan veya freespin ödülünü kazanın!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>Ödül Dağılımı</h2>
+            <p>Cadılar Bayramı Turnuvası kapsamında dağıtılacak ödül türleri ve adetleri:</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Adet</th>
+                        <th>Ödül</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>10</strong></td>
+                        <td>1.000X</td>
+                    </tr>
+                    <tr>
+                        <td><strong>40</strong></td>
+                        <td>500X</td>
+                    </tr>
+                    <tr>
+                        <td><strong>200</strong></td>
+                        <td>100X</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1.000</strong></td>
+                        <td>50X</td>
+                    </tr>
+                    <tr>
+                        <td><strong>20.000</strong></td>
+                        <td>20 Freespin</td>
+                    </tr>
+                    <tr>
+                        <td><strong>50.000</strong></td>
+                        <td>10 Freespin</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="rules">
+            <h2>Genel Kurallar ve Şartlar</h2>
+            <p>Promosyona katılmadan önce lütfen kural, ödül ve katılım şartlarını dikkatlice inceleyin.</p>
+            <h3>Cadılar Bayramı Turnuvası Şartları</h3>
+            <ol class="rules-ol">
+                <li>Wicked Wins (“Promosyon”) <strong>28 Ekim 2026 saat 10:01 CET</strong> ile <strong>1 Kasım 2026 saat 23:59 CET</strong> arasında seçili Halloween temalı Slot oyunlarında geçerlidir.</li>
+                <li>Promosyona katılmak için seçili oyunlardan herhangi birini açın ve ekrana gelen pencerede “TAMAM” seçeneğine tıklayarak katılım onayınızı verin.</li>
+                <li>Rastgele bir ödüle hak kazanmak için oyuna özel minimum bahis şartlarına tabi olmak kaydıyla gerçek parayla bahis almanız ve bal kabağı, hayalet ve şeker olmak üzere <strong>üç (3) sembolün tamamını</strong> toplamanız gerekmektedir.</li>
+                <li>Her bir Geçerli Bahiste en fazla bir (1) sembol verilir. Sembollerin sadece bir (1) veya ikisini (2) toplamak herhangi bir ödül kazandırmaz.</li>
+                <li>Üç (3) sembolün tamamı toplandığında ekrana ödül sandıkları çıkar. Bir sandığı seçerek açıp ödül kazanabilirsiniz.</li>
+                <li>Freespin ödülleri, ödülün kazanıldığı oyunda ve bahis tutarında verilir; verildikten sonra maksimum yedi (7) gün içinde talep edilmeli ve kullanılmalıdır.</li>
+                <li>Bu promosyon boyunca her oyuncu en fazla <strong>iki (2) adet ödül</strong> kazanabilir.</li>
+                <li>Kazanılan nakit ödüller için herhangi bir <strong>çevrim şartı veya çekim limiti bulunmamaktadır</strong>.</li>
+                <li>Bu promosyon Danimarka, İtalya, Letonya, Litvanya, Portekiz, İspanya, İsveç ve İsviçre'de ikamet eden oyuncular için geçerli değildir.</li>
+                <li><strong>Pragmatic Play ve RadissonBet</strong> promosyon kurallarını değiştirme veya iptal etme hakkını saklı tutar.</li>
+            </ol>
+        </section>
+
+        <footer class="footer">
+            © RadissonBet · 18+ · Sorumlu oyun
+        </footer>
+    </main>
+
+</body></html>
